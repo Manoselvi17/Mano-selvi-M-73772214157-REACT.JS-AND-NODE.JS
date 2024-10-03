@@ -1,0 +1,19 @@
+const fs = require('fs');
+console.log('Task 1 starting...');
+const data = fs.readFileSync('file.txt', 'utf8');
+console.log(data);
+console.log('Task 1 finished.');
+console.log('Task 2 starting...');
+for (let i = 0; i < 1e9; i++) {}
+console.log('Task 2 finished.');
+const fs = require('fs');
+console.log('Task 1 starting...');
+fs.readFile('file.txt', 'utf8', (err, data) => {
+if (err) throw err;
+console.log(data);
+console.log('Task 1 finished.');
+});
+console.log('Task 2 starting...');
+for (let i = 0; i < 1e9; i++) {}
+console.log('Task 2 finished.');
+2.
